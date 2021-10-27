@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+//mixing
+@mixin colores {
+    background-color: rgb(186, 197, 201);
+}
+/*Pagina principal*/
+*{
+    box-sizing: border-box;
+}
+.body_Inicio{
+    background-color: rgb(229, 226, 226);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+    .contenido{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-top: 10%;
+        h1{
+            font-size: 70px;
+            margin-top: 5px
+        }
+        p{
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+            font-family: cursive; 
+        }
+        button{
+            width: 150px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #009688;
+            background: transparent;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            background: #009688;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        }
+        button:hover{
+            border: none;
+        }
+    }
+    #carouselExampleIndicators{
+        margin-top: 200px;
+    }
+    footer{
+        width: 100%;
+        padding: 50px 0px;
+        margin-top: 20%;
+        @include colores;
+        .contenedor_footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            .box_footer{
+                display: flex;
+                flex-direction: column;
+                .logo_footer{
+                    img{
+                        width: 90px;
+                    }
+                }
+                .term{
+                    max-width: 350px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+                h2{
+                    margin-bottom: 30px;
+                }
+                ul{
+                    li{
+                        margin-top:10px;
+                        text-decoration: none;
+                        color:rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        list-style: none;
+                        a{
+                            margin-top:10px;
+                            text-decoration: none;
+                            color:rgb(0, 0, 0);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                i{
+                    margin-top:10px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    flex-direction: column;
+                }
+            }
+        }
+        .copyright{
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 0px 40px;
+            p{
+                margin-top: 20px;
+            }
+            hr{
+                height: 1px;
+                color: black;
+            }
+        }
+    }
+}
+/*Paginas DESTINOS*/
+.body__Destinos{
+    background-image: url(../imagenes/segundafotoplaya.jpeg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    .titulo{
+            text-align: center;
+            font-size: 40px;
+            color: #6a6a6a;
+            margin-top: 100px;
+            font-weight: 100;
+            font-family: 'PT Serif', serif;
+            text-transform: uppercase;
+    }
+    .contenedores{
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: auto;
+    }
+    .contenedor .card{
+        width: 330px;
+        height: 430px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+    .contenedor .card:hover{
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+    .contenedor .card img{
+        width: 330px;
+        height: 220px;
+    }
+    .contenedor .card h4{
+        font-weight: 600;
+    }
+    .contenedor .card p{
+        padding: 0 1rem;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .contenedor .card a{
+        font-weight: 500;
+        text-decoration: none;
+        color: #3a98db;
+    }
+    .footer_Destinos{
+        width: 100%;
+        padding: 50px 0px;
+        margin-top: 10%;
+        @include colores;
+        .contenedor_footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            .box_footer{
+                display: flex;
+                flex-direction: column;
+                .logo_footer{
+                    img{
+                        width: 90px;
+                    }
+                }
+                .term{
+                    max-width: 350px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+                h2{
+                    margin-bottom: 30px;
+                }
+                ul{
+                    li{
+                        margin-top:10px;
+                        text-decoration: none;
+                        color:rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        list-style: none;
+                        a{
+                            margin-top:10px;
+                            text-decoration: none;
+                            color:rgb(0, 0, 0);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                i{
+                    margin-top:10px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    flex-direction: column;
+                }
+            }
+        }
+        .copyright{
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 0px 40px;
+            p{
+                margin-top: 20px;
+            }
+            hr{
+                height: 1px;
+                color: black;
+            }
+        }
+    }
+}
+/*Pagina reseñas*/
+.body_Reseñas{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../imagenes/montañosas.jpeg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+    main{
+        .reseñas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 100px;
+            .reseñas_header{
+                margin: 50px 0px;
+                padding: 10px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    font-size: 2.9rem;
+                    font-weight: 500;
+                    background-color: #28706d;
+                    color: white;
+                    padding: 10px 20px;
+                }
+            }
+            .reseñas_contenedor{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                .reseñas_caja{
+                    width: 500px;
+                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+                    background-color: white;
+                    padding: 20px;
+                    margin: 15px;
+                    cursor: pointer;
+                    .perfil_imagen{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        overflow:hidden;
+                        margin-right: 30px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit:cover;
+                        }
+                    }
+                    .caja_top{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        .perfil{
+                            display: flex;
+                            align-items: center;
+                            .nombre_usuario{
+                                display: flex;
+                                flex-direction: column;
+                                strong{
+                                    color: #3d3d3d;
+                                    font-size: 1.3rem;
+                                }
+                                .spann{
+                                    color: #979797;
+                                    font-size: 1.1rem;
+                                }
+                            }
+                        }
+                        .estrellas{
+                            color: yellow;
+                        }
+                    }
+                    .comentarios_clientes{
+                        p{
+                            color: #4b4b4b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        padding: 50px 0px;
+        margin-top: 20%;
+        @include colores;
+        .contenedor_footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            .box_footer{
+                display: flex;
+                flex-direction: column;
+                .logo_footer{
+                    img{
+                        width: 90px;
+                    }
+                }
+                .term{
+                    max-width: 350px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+                h2{
+                    margin-bottom: 30px;
+                }
+                ul{
+                    li{
+                        margin-top:10px;
+                        text-decoration: none;
+                        color:rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        list-style: none;
+                        a{
+                            margin-top:10px;
+                            text-decoration: none;
+                            color:rgb(0, 0, 0);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                i{
+                    margin-top:10px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    flex-direction: column;
+                }
+            }
+        }
+        .copyright{
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 0px 40px;
+            p{
+                margin-top: 20px;
+            }
+            hr{
+                height: 1px;
+                color: black;
+            }
+        }
+    }
+}
+/*Pagina contacto*/
+.body_Contacto{
+    background-color: rgb(179, 172, 172);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+    
+    footer{
+        width: 100%;
+        padding: 50px 0px;
+        margin-top: 20%;
+        @include colores;
+    }
+    .contenedor_footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .box_footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .box_footer .logo_footer img{
+        width: 90px;
+    }
+    .box_footer .term{
+        max-width: 350px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .box_footer h2{
+        margin-bottom: 30px;
+    }
+    .box_footer li {
+        margin-top:10px;
+        text-decoration: none;
+        color:rgb(0, 0, 0);
+        text-transform: uppercase;
+        list-style: none;
+    }
+    .box_footer li a{
+        margin-top:10px;
+        text-decoration: none;
+        color:rgb(0, 0, 0);
+        text-transform: uppercase;
+    }
+    .box_footer i{
+        margin-top:10px;
+        text-decoration: none;
+        font-weight: bold;
+        flex-direction: column;
+    }
+    .copyright{
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        padding: 0px 40px;
+    }
+    .copyright p{
+        margin-top: 20px;
+    }
+    .copyright hr{
+        height: 1px;
+        color: black;
+    }
+}
+/*Pagina ingresar*/
+.body_Ingresar{
+    background-color: rgb(179, 172, 172);;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+}
+.body_Ingresar{
+    background: url(../imagenes/hoteles.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+}
+.form-iniciarsesion{
+    width: 400px;
+    background: lightblue;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px rgb(142, 135, 238);
+    transition: all 0.5s ease;
+}
+.form-iniciarsesion:hover{
+    transform: scale(1.2,1.2);
+}
+
+.form-iniciarsesion h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: rgb(254, 253, 255);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.form-iniciarsesion p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-iniciarsesion a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-iniciarsesion a:hover {
+    color: rgb(171, 168, 211);
+    text-decoration: underline;
+}
+
+.form-iniciarsesion .botons{
+    width: 100%;
+    border: none;
+    padding: 12px;
+    color: rgb(28, 121, 241);
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    margin-top: 20%;
+    @include colores;
+}
+.contenedor_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.box_footer{
+    display: flex;
+    flex-direction: column;
+}
+.box_footer .logo_footer img{
+    width: 90px;
+}
+.box_footer .term{
+    max-width: 350px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.box_footer h2{
+    margin-bottom: 30px;
+}
+.box_footer li {
+    margin-top:10px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+    list-style: none;
+}
+.box_footer li a{
+    margin-top:10px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+.box_footer i{
+    margin-top:10px;
+    text-decoration: none;
+    font-weight: bold;
+    flex-direction: column;
+}
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+.copyright p{
+    margin-top: 20px;
+}
+.copyright hr{
+    height: 1px;
+    color: black;
+}
+/*Pagina registro*/
+.body_Registrar{
+    background: url(../imagenes/hoteles.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+    .navegador{
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            width: 120px;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            :hover{
+                transform: rotate(70deg);
+            }
+        }
+        ul{
+            li{
+                display: inline-block;
+                margin: 0 20px;
+                font-size: 18px;
+                position: relative;
+                ::after{
+                    content: "";
+                    height: 3px;
+                    width: 0;
+                    background: #000000;
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    transition: 0.5s;
+                }
+                :hover::after{
+                    width: 100%;
+                }
+                a{
+                    text-decoration: none;
+                    color:black;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .form-registro{
+        width: 400px;
+        background: lightblue;
+        padding: 30px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 4px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        box-shadow: 7px 13px 37px rgb(142, 135, 238);
+        transition: all 0.5s ease;
+    }
+    .form-registro:hover{
+        transform: scale(1.2,1.2);
+    }
+    .form-registro h4{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .controls{
+        width: 100%;
+        background: rgb(254, 253, 255);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid orange;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+    }
+    .form-registro p{
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    .form-registro a {
+        color: white;
+        text-decoration: none;
+    }
+    .form-registro a:hover {
+        color: rgb(171, 168, 211);
+        text-decoration: underline;
+    }
+    .form-registro .botons{ 
+        width: 100%;
+        border: none;
+        padding: 12px;
+        color: rgb(28, 121, 241);
+        margin: 16px 0;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    margin-top: 20%;
+    @include colores;
+}
+.contenedor_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.box_footer{
+    display: flex;
+    flex-direction: column;
+}
+.box_footer .logo_footer img{
+    width: 90px;
+}
+.box_footer .term{
+    max-width: 350px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.box_footer h2{
+    margin-bottom: 30px;
+}
+.box_footer li {
+    margin-top:10px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+    list-style: none;
+}
+.box_footer li a{
+    margin-top:10px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+.box_footer i{
+    margin-top:10px;
+    text-decoration: none;
+    font-weight: bold;
+    flex-direction: column;
+}
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+.copyright p{
+    margin-top: 20px;
+}
+.copyright hr{
+    height: 1px;
+    color: black;
+}
